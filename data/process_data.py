@@ -60,6 +60,8 @@ def clean_data(df):
         categories[column] = categories[column].str[-1]
         # convert column from string to numeric
         categories[column] = categories[column].astype(int)
+        # Clean binary response
+        categories.loc[categories['related'] == 2, 'related'] = 1
     
     # drop the original categories column from `df`
     df.drop(['categories'], axis=1, inplace=True)
@@ -71,6 +73,9 @@ def clean_data(df):
     print('duplicate rows:{}'.format(sum(df.duplicated())))
     df=df.drop_duplicates()
     print('duplicate rows after removal:{}'.format(sum(df.duplicated())))
+    
+    #Remove colums
+    df = df.drop(["child_alone"], axis=1)
     
     return df
 
@@ -88,7 +93,7 @@ def save_data(df, database_filename):
     ''' 
     
     engine = create_engine("sqlite:///" + database_filename)
-    table_name = "T_Categorized_Messages"
+    table_name = "T_Categorized_Messages1"
     df.to_sql(table_name, engine, index=False, if_exists="replace")
 
 def main():
