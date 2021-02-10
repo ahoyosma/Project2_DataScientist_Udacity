@@ -15,14 +15,14 @@ This project is a requirement of the Udacity Data Science Nanodegree. The projec
 ## 3.File Descriptions
 
 **data** 
-contains the twuo .csv files and a process.py which can be called from a terminal python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db 
+contains the twuo .csv files and a process.py which can be called from a terminal "python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db"
 
 **model**
-contains train_classifier.py which can be called from terminal eg. python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl 
+contains train_classifier.py which can be called from terminal  "python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl" 
 
 **app**
 contains run.py used to deploy the flask app. It can be called from a terminal by
-running the following command in the app's directory python run.py
+running the following command in the app's directory "python run.py"
 
 when the app is running Go to http://0.0.0.0:3001/
 
