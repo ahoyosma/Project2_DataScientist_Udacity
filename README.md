@@ -30,8 +30,7 @@ contains train_classifier.py which can be called from terminal  "python models/t
 * **ETL Pipeline Preparation.ipynb** jupiter notebook with the process.
 
 **app**
-contains **run.py** used to deploy the flask app. It can be called from a terminal by
-running the following command in the **app's directory** "python run.py"
+contains **run.py** used to deploy the flask app. It can be called from a terminal by running the following command in the **app's directory** "python run.py" (before running make sure to be in the app directory use **cd app** in the terminal.
 
 when the app is running Go to http://0.0.0.0:3001/
 
